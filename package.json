@@ -1,0 +1,24 @@
+{
+  "name": "rally-interview-request",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start.worker": "ts-node src/worker.ts",
+    "start.workflow": "ts-node src/client.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@temporalio/activity": "^1.13.1",
+    "@temporalio/client": "^1.13.1",
+    "@temporalio/worker": "^1.13.1",
+    "@temporalio/workflow": "^1.13.1"
+  }
+}
