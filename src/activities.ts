@@ -28,12 +28,12 @@ export const technicalInterviewTwo = async (): Promise<string> => {
     return 'Passed!'
 }
 
-export const RallyEvaluatesAseel = async (): Promise<string> => {
+export const rallyEvaluatesAseel = async (): Promise<string> => {
     console.log('should we hire her?')
     return '<Insert Rally Evaluation>'
 }
 
-export const AseelEvaluatesRally = async (): Promise<string> => {
+export const aseelEvaluatesRally = async (): Promise<string> => {
     console.log('Aseel checks out Rally...');
     console.log('✓ Cool product');
     console.log('✓ Interesting problems to solve');

@@ -1,0 +1,16 @@
+# Dependencies
+node_modules
+
+# Build output
+dist
+build
+*.tsbuildinfo
+
+# Coverage
+coverage
+
+# Logs
+*.log
+
+# Temporal
+.temporal

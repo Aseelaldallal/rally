@@ -14,7 +14,7 @@ import  type * as activities from "./activities";
  * proxyActivities: temporal function that creats proxy versions of your activities
  * These proxies don't run the actual code - they send messages to the worker to run them
 */
-const { readAseelResume } = proxyActivities<typeof activities>({
+const { readAseelResume, meetAndGreetAseel, technicalInterviewOne, technicalInterviewTwo, rallyEvaluatesAseel, aseelEvaluatesRally, makeMutualDecision } = proxyActivities<typeof activities>({
     startToCloseTimeout: "1 minute", // Activity doesn't finish in 1 min? Fail it
 });
 
@@ -22,8 +22,12 @@ const { readAseelResume } = proxyActivities<typeof activities>({
 // Main workflow
 export const interviewAseelWorkflow = async(): Promise<string> => {
     console.log('Starting workflow for interviewing Aseel');
-    const result = await readAseelResume();
-    console.log(result);
-    console.log('Workflow complete');
+    await readAseelResume();
+    await meetAndGreetAseel();
+    await technicalInterviewOne();
+    await technicalInterviewTwo();
+    await rallyEvaluatesAseel();
+    await aseelEvaluatesRally();
+    await makeMutualDecision();
     return 'Done'
 }
